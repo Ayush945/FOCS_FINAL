@@ -4,7 +4,7 @@ def speed_analysis():
     print("\nSwallow Speed Analysis: Version 1.0\n")
     datas=list()
 
-    while True: 
+    while True: #continuous asking
         reading_1=input("Enter the reading:")
         if (reading_1) == "":   #if no reading is given
             if (len(datas)) == 0:   #checking the length of datas

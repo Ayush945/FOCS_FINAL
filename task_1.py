@@ -1,9 +1,9 @@
 print("\nStop! Who would cross the Bridge of Death\nMust answer me these question three, 'ere the other side he see.\n")
 
-name=input("What is your name? ")
+name=input("What is your name? ").lower()
 king_name="arthur"
 
-if name.lower()==king_name: #Checking the king's name
+if name==king_name: #Checking the king's name
     print("My liege! You may pass!")
 else:
     quest=input("What is your quest? ")
@@ -12,7 +12,7 @@ else:
     if quest_goal in quest.lower(): #Checking the quest
         color=input("What is your favourite colour? ")
 
-        if color[0]==name[0]: #Checking the first character of color and name 
+        if color[0].lower()==name[0]: #Checking the first character of color and name 
             print("You may pass")
         else:
             print("Incorrect! You must now face the Gorge of Eternal Peril.")
