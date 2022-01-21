@@ -28,21 +28,27 @@ if checking_email:      #checking if email is valid
     tmp_name=email_address.split("@")       #Spliting from @ for user name
     user_name=tmp_name[0]
 
-    print(f"Hi,{user_name} ! Thank you, and Welcome to PopChat !\n My name is {operator_name}, and it will be my pleasure to help you.")
+    print(f"Hi,{user_name.capitalize()} ! Thank you, and Welcome to PopChat !\n My name is {operator_name}, and it will be my pleasure to help you.")
     
     while True:
         question=input("--->").lower()
         if question in exit_1: #checking if input is for exiting
-            print(f"Thank you, {user_name} for using PopChat. See you again soon!") 
+            print(f"Thank you, {user_name.capitalize()} for using PopChat. See you again soon!") 
             break
         
-        simple_response={"library":response_1,"wifi":response_2,"deadline":response_3,"roof":response_4,"study":response_5,"food":response_6}#dictionary for responses
+        simple_response={"library":response_1,
+                        "wifi":response_2,
+                        "deadline":response_3,
+                        "roof":response_4,
+                        "study":response_5,
+                        "food":response_6}#dictionary for responses
         try:    
             print(random.choice(simple_response[question])) 
         except:
             print(random.choice(response))
+            
         if random.choice(nerwork_error)==0: #checking for network error
-            print(f"***Network Error***\nThank you, {user_name} for using PopChat. See you again soon!")
+            print(f"***Network Error***\nThank you, {user_name.capitalize()} for using PopChat. See you again soon!")
             break  
               
 else:

@@ -12,6 +12,7 @@ class euro_table():
         win=loss=draw=match_played=for_team=against_team=diff=points=0
         for place in range(len(all_datas)):
             if self.nations in all_datas[place]:
+                
                 #indexing to see the position of final goals.
                 nations_goal_index=all_datas[place].index(self.nations)+1
                 rival_goal_index=4-nations_goal_index
@@ -38,7 +39,8 @@ class euro_table():
 
 value=sys.argv[1:]
 for i in value:
-    print(i.center(60),end="")
+    print(i.center(60),end="" "\n")
+    print(("="*len(i)).center(60))
 print("\n")
 
 #opening and reading data from csv file
